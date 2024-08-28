@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Contraseña</title>
+    <style>
+        body {
+            background: url('https://static.vecteezy.com/system/resources/thumbnails/001/886/995/small/light-pink-abstract-background-vector.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        input[type="password"] {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff69b4;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+    <script>
+        function checkPassword(event) {
+            event.preventDefault();
+            const password = document.querySelector('input[name="password"]').value;
+            if (password === "5834") {
+                window.location.href = "confirm.html";
+            } else {
+                alert("Contraseña incorrecta. Inténtelo de nuevo.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ingrese Contraseña</h1>
+        <form onsubmit="checkPassword(event)">
+            <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+            <button type="submit">Continuar</button>
+        </form>
+    </div>
+</body>
+</html>
